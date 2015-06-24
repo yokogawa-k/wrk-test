@@ -18,3 +18,4 @@ wrk で終了時に nginx で 499 がでるというお話
 htdocs-php の index.php に usleep を追加すると発生を確認。 
 wrk が終了時に切断してるから？
 
+![スクリーンショット](./misc/work-test.png)
