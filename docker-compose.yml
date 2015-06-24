@@ -1,0 +1,25 @@
+# vi: set et ts=2 sw=2 sts=0 :
+
+wrk:
+  image: yokogawa/wrk:latest
+  command: -t 1 -c 110 -d 10s --timeout 10 http://nginx/index.php
+  links:
+    - nginx
+
+nginx:
+  image: nginx:1.9
+  volumes:
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  links:
+    - php01
+    - php02
+
+php01:
+  image: php:5.6-fpm
+  volumes:
+    - ./htdocs-php:/var/www/html
+
+php02:
+  image: php:5.6-fpm
+  volumes:
+    - ./htdocs-php:/var/www/html
