@@ -1,6 +1,6 @@
-# wrk の実験
+# [wrk](https://github.com/wg/wrk) の実験
 
-wrk で終了時に nginx で 499 がでるというお話
+[wrk](https://github.com/wg/wrk) で終了時に nginx で 499 がでるというお話
 
 ## 必要なもの
 
